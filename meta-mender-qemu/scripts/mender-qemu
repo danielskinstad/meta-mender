@@ -53,7 +53,7 @@ fi
 QEMU_ARGS=""
 
 # Extract certain variables from build, with "EXTRACTED_" prefix.
-eval "$(cd $BUILDDIR && bitbake -e core-image-minimal | egrep '^(export )?(MENDER_MACHINE|MENDER_FEATURES|MENDER_DEVICE_TYPE)=')"
+eval "$(cd $BUILDDIR && bitbake -e $IMAGE_NAME | egrep '^(export )?(MENDER_MACHINE|MENDER_FEATURES|MENDER_DEVICE_TYPE)=')"
 MACHINE="${MACHINE:-$MENDER_MACHINE}"
 
 case "$MACHINE" in
