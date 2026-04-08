@@ -35,7 +35,7 @@ updates:
     schedule:
       interval: monthly
       day: saturday
-    target-branch: scarthgap
+    target-branch: wrynose
     reviewers:
       - "mendersoftware/client-dependabot-reviewers"
   - commit-message:

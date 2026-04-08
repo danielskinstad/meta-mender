@@ -11,6 +11,9 @@ inherit go-ptest
 
 GO_IMPORT = "github.com/mendersoftware/mender-snapshot"
 
+INSANE_SKIP:${PN} += "buildpaths textrel"
+INSANE_SKIP:${PN}-dbg += "buildpaths"
+
 # Prefer static linkage (golang's default)
 GO_LINKSHARED = ""
 

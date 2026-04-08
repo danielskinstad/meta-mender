@@ -20,6 +20,9 @@ inherit systemd
 
 GO_IMPORT = "github.com/mendersoftware/mender-connect"
 
+INSANE_SKIP:${PN} += "buildpaths textrel"
+INSANE_SKIP:${PN}-dbg += "buildpaths"
+
 # Prefer static linkage (golang's default)
 GO_LINKSHARED = ""
 

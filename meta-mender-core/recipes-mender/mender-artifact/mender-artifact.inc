@@ -38,4 +38,4 @@ do_install() {
     install ${BUILD_BIN_FOLDER}/mender-artifact -m 0755 ${D}${bindir}
 }
 
-INSANE_SKIP:${PN} = "already-stripped textrel ldflags"
+INSANE_SKIP:${PN} = "already-stripped textrel ldflags buildpaths"
